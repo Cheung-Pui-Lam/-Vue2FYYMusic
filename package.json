@@ -1,5 +1,5 @@
 {
-  "name": "hmplayer",
+  "name": "fyymusic",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,8 +7,17 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@babel/core": "^7.18.13",
+    "@babel/preset-env": "^7.18.10",
+    "@moefe/vue-aplayer": "^2.0.0-beta.5",
+    "axios": "^0.27.2",
     "core-js": "^3.6.4",
-    "vue": "^2.6.11"
+    "element-ui": "^2.15.9",
+    "hls.js": "^1.2.1",
+    "vue": "^2.6.11",
+    "vue-aplayer": "^1.6.1",
+    "vue-router": "^3.1.6",
+    "vuex": "^3.6.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.2.0",

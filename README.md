@@ -1,19 +1,59 @@
-# hmplayer
+# 仿抑云音乐(Vue2)
 
 ## Project setup
+
 ```
 npm install
 ```
 
 ### Compiles and hot-reloads for development
+
 ```
 npm run serve
 ```
 
 ### Compiles and minifies for production
+
 ```
 npm run build
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+# 所有功能实现：
+
+1. 音乐的播放
+2. 歌单的获取(音乐的播放)
+3. mv的获取(mv的播放)
+   (1).mv的相关推荐切换(包括评论区的实时更新)
+   (2).相关mv的获取,评论区的分页跳转实现
+4. 搜索页的歌曲栏,歌单和mv栏的切换时,数据的实时更新(进行分类栏切换时分页器自动跳回1)
+5. 最新音乐数据的分页(最新音乐的后端数据接口是没有limit参数来限制音乐的获取的,每一次获取都是100条)
+   实现方法:首先将获取到的100条数据进行切割,成10分,一份10条(在页码事件中填写),
+   	向Vue的data中增添一项新数据:currentList(当前页面的歌曲数)用于显示当前页面,
+   	当页码事件触发时,将分割的数据赋给currentList,然后将currentList使用v-for循环展现在页面上即可
+6. 搜索歌曲和最新音乐(100条),的mv播放按钮的显示于隐藏以及跳转
+7. 实现了最新音乐100条数据的分页功能
+8. 使用vuex集中管理状态（播放列表数据），里面包括对音乐url，音乐的详细信息以及音乐的歌词的集中获取和管理
+   1. 通过音乐的id获取音乐的url，音乐的详细信息和歌词
+   2. 创建两个播放列表，一个用于初始化另一个用于存放真正的音乐列表数据，当点击清空列表按钮时，
+      将初始化列表数据传给展示组件，当点击音乐播放按钮时，获取到的数据赋给真正的播放列表，
+      同时替换掉初始列表
+9. 引入Vue-aplayer插件美化播放音乐的播放组件
+10. 实现音乐列表的删除，音乐添加进播放列表以及点击音乐插入第一位播放，点击添加按钮插入到列表的最后一位
+
+# 该项目所用到的技术栈
+
+- Vue-cli
+- axios
+- Vuex
+- promise
+- elementUI组件库
+- Vue-router
+
+
+
+## 关于作者：
+
+- 姓名：肥林
+- 一个菜鸡前端程序员
+
+[github地址]('https://github.com/Cheung-Pui-Lam')
