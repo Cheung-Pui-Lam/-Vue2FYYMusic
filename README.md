@@ -1,4 +1,4 @@
-# 仿抑云音乐(Vue2)
+# Vue2仿抑云音乐(PC端)
 
 ## Project setup
 
